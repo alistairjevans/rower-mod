@@ -1,0 +1,75 @@
+﻿@page
+@model aspnetrower.Pages.IndexModel
+<html>
+  <head>
+    <style>
+      
+      .container {
+        position: absolute;
+        left:0;
+        top:0;
+        right:0;
+        bottom:0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 8fr;
+        grid-template-rows: 1fr 1fr 2fr 2fr;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+      }
+
+      .text {
+        font-family: Arial;
+        font-size: 2em;
+        padding-top: 10px;
+        vertical-align: middle;
+      }
+
+      .lbl {
+        padding-left: 10px;
+        font-weight: bold;
+      }
+
+      .lblSpeed { grid-area: 1 / 1 / 2 / 2; }
+
+      .valSpeed { grid-area: 1 / 2 / 2 / 3; }
+
+      .lblCount { grid-area: 2 / 1 / 3 / 2; }
+
+      .valCount { grid-area: 2 / 2 / 3 / 3; }
+
+      .btnContainer { 
+        text-align: center;
+        grid-area: 3 / 1 / 4 / 3; 
+      }
+
+      .chartContainer { 
+        grid-area: 1 / 3 / 5 / 5; 
+      }
+
+      #reset {
+        font-size: 1.5em;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="lblSpeed text lbl">Speed:</div>
+      <div class="valSpeed text" id="currentSpeed"></div>
+      <div class="lblCount text lbl">Count:</div>
+      <div class="valCount text" id="currentCount"></div>
+      <div class="btnContainer">
+        <button id="reset">Reset Count</button>
+      </div>
+      <div class="chartContainer">
+        <canvas id="chartCanvas"></canvas>
+      </div>
+    </div>
+    <script src="~/lib/signalr/dist/browser/signalr.js"></script>
+    <script src="~/lib/moment.js/moment.min.js"></script>
+    <script src="~/lib/Chart.js//Chart.min.js"></script>
+    <script src="~/lib/chartjs-plugin-streaming/dist/chartjs-plugin-streaming.min.js"></script>
+    <script src="~/js/site.js"></script>
+  </body>
+  
+</html>
