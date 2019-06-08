@@ -1,5 +1,4 @@
 ﻿@page
-@model aspnetrower.Pages.IndexModel
 <html>
   <head>
     <style>
@@ -54,17 +53,22 @@
   </head>
   <body>
     <div class="container">
+      
       <div class="lblSpeed text lbl">Speed:</div>
-      <div class="valSpeed text" id="currentSpeed"></div>
+      <div class="valSpeed text" id="currentSpeed"><!-- speed goes here --></div>
+      
       <div class="lblCount text lbl">Count:</div>
-      <div class="valCount text" id="currentCount"></div>
+      <div class="valCount text" id="currentCount"><!-- stroke count goes here --></div>
+
       <div class="btnContainer">
         <button id="reset">Reset Count</button>
       </div>
+      
       <div class="chartContainer">
         <canvas id="chartCanvas"></canvas>
       </div>
     </div>
+
     <script src="~/lib/signalr/dist/browser/signalr.js"></script>
     <script src="~/lib/moment.js/moment.min.js"></script>
     <script src="~/lib/Chart.js//Chart.min.js"></script>

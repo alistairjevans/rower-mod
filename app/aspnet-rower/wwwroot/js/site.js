@@ -47,9 +47,11 @@ window.onload = function () {
 
 connection.on("newData", function (time, speed, count) {
 
+  // This subtract causes the data to be placed
+  // in the centre of the chart as it arrives, 
+  // which I personally think looks better...
   var dateValue = moment(time).subtract(5, 'seconds');
 
-  //timeValue.innerText = dateValue.format("mm:ss.SSS");
   speedValue.innerText = speed;
   countValue.innerText = count;
 

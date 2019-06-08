@@ -17,17 +17,15 @@
       "files": [
         "moment.min.js"
       ]
+    },
+    {
+      "provider": "cdnjs",
+      "library": "Chart.js@2.8.0",
+      "destination": "wwwroot/lib/Chart.js/"
+    },
+    {
+      "library": "chartjs-plugin-streaming@latest",
+      "destination": "wwwroot/lib/chartjs-plugin-streaming/"
     }
-  ,
-{
-  "provider": "cdnjs",
-  "library": "Chart.js@2.8.0",
-  "destination": "wwwroot/lib/Chart.js/"
-}
-,
-{
-  "library": "chartjs-plugin-streaming@latest",
-  "destination": "wwwroot/lib/chartjs-plugin-streaming/"
-}
-]
+  ]
 }

@@ -35,6 +35,7 @@ namespace aspnetrower
       services.AddControllersWithViews()
           .AddNewtonsoftJson();
       services.AddRazorPages();
+
       services.AddSignalR();
     }
 
