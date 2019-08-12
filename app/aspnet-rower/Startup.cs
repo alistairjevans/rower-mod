@@ -61,9 +61,8 @@ namespace aspnetrower
                   name: "default",
                   pattern: "{controller=Home}/{action=Index}/{id?}");
         endpoints.MapRazorPages();
+        endpoints.MapHub<FeedHub>("/feed");
       });
-
-      app.UseSignalR(cfg => cfg.MapHub<FeedHub>("/feed"));
     }
   }
 }
